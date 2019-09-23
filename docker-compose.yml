@@ -1,0 +1,12 @@
+version: '3'
+services:
+  app:
+    build: .
+    ports:
+      - "8080:8080"
+    links:
+      - redis:redis-host
+    depends_on:
+      - redis
+  redis:
+    image: redis
