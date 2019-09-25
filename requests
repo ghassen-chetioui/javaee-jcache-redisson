@@ -1,0 +1,4 @@
+curl -i -s -w "%{time_starttransfer}\n" -XGET "localhost:8080/javaee-jcache-redisson/resources/orders"
+curl -i -s -w "%{time_starttransfer}\n" -XPOST -H "Content-Type: application/json" -d  '{"itemName": "coffee", "itemQuantity": 5}' "localhost:8080/javaee-jcache-redisson/resources/orders"
+curl -i -s -w "%{time_starttransfer}\n" -XGET "localhost:8080/javaee-jcache-redisson/resources/orders/{order-id}"
+curl -i -s -w "%{time_starttransfer}\n" -XDELETE "localhost:8080/javaee-jcache-redisson/resources/orders/{order-id}"

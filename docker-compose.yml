@@ -1,6 +1,7 @@
 version: '3'
 services:
-  app:
+  application:
+    image: javaee-jcache-redisson
     build: .
     ports:
       - "8080:8080"
@@ -8,5 +9,6 @@ services:
       - redis:redis-host
     depends_on:
       - redis
+
   redis:
     image: redis

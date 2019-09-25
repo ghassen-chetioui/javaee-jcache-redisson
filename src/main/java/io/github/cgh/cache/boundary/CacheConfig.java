@@ -1,4 +1,4 @@
-package io.github.cgh;
+package io.github.cgh.cache.boundary;
 
 import javax.cache.CacheManager;
 import javax.cache.Caching;
